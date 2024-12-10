@@ -1,0 +1,122 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align:center;
+  color: blue;
+} */
+
+/* General Background and Layout */
+body {
+  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('/images/bg.jpg');
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  
+  
+  
+}
+
+
+
+#root {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 5rem;
+  text-align: center;
+  color: blue;
+  background-color: #ffffff; /* White background for the content */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: navy;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: darkblue;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+  background-color: #f9f9f9;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+th {
+  background-color: #007BFF;
+  color: white;
+  font-size: 1rem;
+}
+
+td {
+  font-size: 0.9rem;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Adds space between buttons */
+  margin-top: 2rem; /* Adds space between buttons and other elements */
+  
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+  
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+  }
+}
