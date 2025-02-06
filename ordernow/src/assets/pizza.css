@@ -1,0 +1,87 @@
+/* Pizza.css */
+.pizza-page {
+  background-image: url('../assets/pizza-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.pizza-page {
+  text-align: center;
+  padding: 20px;
+  background-image: url('../assets/pizzabgimg.jpg.jpg'); /* Set the background image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+h3{
+ color: black;
+ font-family: cursive;
+}
+
+.pizza-container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 21px;
+  border-radius: 10px;
+  color: white;
+  max-width: 800px;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.pizza-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.pizza-item {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  width: 220px;
+}
+
+.pizza-item img {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+}
+
+.order-button {
+  background: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.order-button:hover {
+  background: #cc5500;
+}
+
+.h3,p{
+  color: black;
+
+}
+
+
+  

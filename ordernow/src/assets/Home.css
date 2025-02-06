@@ -1,0 +1,65 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures full height for body */
+}
+
+/* Home container setup */
+.Home-container {
+  margin: 0;
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full viewport width */
+  background-image: url('../assets/hotel.jpg'); /* Path to your background image */
+  background-size: cover; /* Ensures the background image covers the whole container */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents image repetition */
+  overflow: hidden; /* Prevents scrolling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stacks the content vertically */
+  text-align: center;
+}
+
+/* Styling the h1 text with continuous rewrite effect and a good font */
+h1 {
+  font-family: cursive; /* Choose a good font like Roboto */
+  font-size: 4rem; /* Adjust size as needed */
+  font-weight: bold;
+  color: transparent;
+  -webkit-background-clip: text; /* Makes the gradient appear on the text */
+  background-clip: text; /* Standard background clip */
+  margin-bottom: 30px; /* Adds space between text and button */
+  letter-spacing: 2px; /* Adds space between letters */
+  text-transform: uppercase; /* Makes the text uppercase */
+}
+
+h1 span.welcome {
+  background: linear-gradient(to right, #635fff, #6045b1); /* Gradient from left to right */
+  -webkit-background-clip: text; /* Makes the gradient appear on the text */
+  background-clip: text; /* Standard background clip */
+  color: transparent; /* Removes default text color */
+}
+
+h1 span.hotel {
+  color: #c54ae2; /* Blue color for "Our Hotel" */
+}
+
+/* Button styling */
+.home-button {
+  padding: 12px 24px; /* Adjust size for better fit */
+  background-color: #ff5f5f; /* Gradient-like color */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  margin-top: 20px; /* Space between text and button */
+}
+
+.home-button:hover {
+  background-color: lightseagreen; /* On hover, change to the second gradient color */
+  transform: scale(1.05); /* Slightly enlarges the button */
+}
