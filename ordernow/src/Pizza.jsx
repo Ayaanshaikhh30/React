@@ -1,37 +1,29 @@
-import React from 'react';
-import './assets/pizza.css';
+import React, { useState } from "react";
+import "./assets/pizza.css";
+import OrderForm from "./OrderForm"; // Import Order Form
 
 const Pizza = () => {
-  
+  const [selectedItem, setSelectedItem] = useState(null);
+
   return (
     <div className="pizza-page">
       <div className="pizza-container">
         <h2>Delicious Pizzas 🍕</h2>
-        <p1>Enjoy our mouth-watering pizzas made with fresh ingredients!</p1>
-        
+        <p>Enjoy our freshly baked pizzas with rich toppings!</p>
+
         <div className="pizza-grid">
-          <div className="pizza-item">
-            <img src="../src/pizzatype/margareta.jpg" alt="Margherita Pizza" />
-            <h3>Margherita</h3>
-            <p>Classic delight with fresh tomatoes & basil.</p>
-            <button className="order-button">Order Now</button>
-          </div>
-
-          <div className="pizza-item">
-            <img src="../src/pizzatype/pepperoni.jpg" alt="Pepperoni Pizza" />
-            <h3>Pepperoni</h3>
-            <p>Loaded with spicy pepperoni slices.</p>
-            <button className="order-button">Order Now</button>
-          </div>
-
-          <div className="pizza-item">
-            <img src="../src/pizzatype/veggie.jpg" alt="Veggie Pizza" />
-            <h3>Veggie Special</h3>
-            <p>Topped with fresh veggies & cheese.</p>
-            <button className="order-button">Order Now</button>
-          </div>
+          {["margareta", "Pepperoni", "veggie"].map((item) => (
+            <div className="pizza-item" key={item}>
+              <img src={`../src/pizzatype/${item.toLowerCase().replace(/\s/g, "-")}.jpg`} alt={item} />
+              <h3>{item}</h3>
+              <p>Try our delicious {item} pizza.</p>
+              <button className="order-button" onClick={() => setSelectedItem(item)}>Order Now</button>
+            </div>
+          ))}
         </div>
       </div>
+
+      {selectedItem && <OrderForm item={selectedItem} onClose={() => setSelectedItem(null)} />}
     </div>
   );
 };

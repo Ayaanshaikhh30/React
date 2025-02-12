@@ -1,36 +1,29 @@
-import React from 'react';
-import './assets/pasta.css';
+import React, { useState } from "react";
+import "./assets/pasta.css";
+import OrderForm from "./OrderForm"; // Import Order Form
 
 const Pasta = () => {
+  const [selectedItem, setSelectedItem] = useState(null);
+
   return (
     <div className="pasta-page">
       <div className="pasta-container">
-        <h2>Delicious Pastas 🍝</h2>
-        <p1>Indulge in our mouth-watering pasta dishes made with fresh ingredients!</p1>
-        
+        <h2>Delicious Pasta 🍝</h2>
+        <p>Enjoy our mouthwatering pasta, cooked to perfection!</p>
+
         <div className="pasta-grid">
-          <div className="pasta-item">
-            <img src="../src/pastatype/spaghetti.jpg" alt="Spaghetti" />
-            <h3>Spaghetti</h3>
-            <p>Classic Italian pasta with a rich tomato sauce.</p>
-            <button className="order-button">Order Now</button>
-          </div>
-
-          <div className="pasta-item">
-            <img src="../src/pastatype/fettuccine-alfredo.jpg" alt="Alfredo Pasta" />
-            <h3>Fettuccine Alfredo</h3>
-            <p>Rich and creamy pasta with a white Alfredo sauce.</p>
-            <button className="order-button">Order Now</button>
-          </div>
-
-          <div className="pasta-item">
-            <img src="../src/pastatype/Penne Arrabbiata.jpg" alt="Penne Arrabbiata" />
-            <h3>Penne Arrabbiata</h3>
-            <p>Spicy penne pasta with a tangy tomato sauce.</p>
-            <button className="order-button">Order Now</button>
-          </div>
+          {["Spaghetti", "Penne-Arrabbiata", "fettuccine-alfredo"].map((item) => (
+            <div className="pasta-item" key={item}>
+              <img src={`../src/pastatype/${item.toLowerCase().replace(/\s/g, "-")}.jpg`} alt={item} />
+              <h3>{item}</h3>
+              <p>Try our delicious {item}.</p>
+              <button className="order-button" onClick={() => setSelectedItem(item)}>Order Now</button>
+            </div>
+          ))}
         </div>
       </div>
+
+      {selectedItem && <OrderForm item={selectedItem} onClose={() => setSelectedItem(null)} />}
     </div>
   );
 };

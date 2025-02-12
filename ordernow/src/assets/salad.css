@@ -1,0 +1,97 @@
+.salad-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f9e8; /* Light green background */
+}
+
+.salad-page {
+    text-align: center;
+    padding: 20px;
+    background-image: url('../assets/Saladbgimg.jpg'); /* Set the background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+  }
+
+  .salad-container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Light transparent white */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+    backdrop-filter: blur(10px); /* Smooth blur effect */
+}
+
+
+h2 {
+    color: #4CAF50; /* Green heading */
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+p1 {
+    font-size: 18px;
+    color: #555;
+}
+
+.salad-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.salad-item {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.salad-item img {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+}
+
+h3 {
+    margin: 10px 0;
+    color: #2e7d32; /* Dark green text */
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+.order-button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.order-button:hover {
+    background-color: #388E3C; /* Dark green on hover */
+}
+
+.p1 {
+    color: black;
+}

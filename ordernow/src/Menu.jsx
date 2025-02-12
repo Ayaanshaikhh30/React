@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaPizzaSlice, FaLeaf, FaIceCream, FaUtensils } from "react-icons/fa";
+
+
 import "./assets/Menu.css";
 
 const Menu = () => {
@@ -30,9 +32,9 @@ const Menu = () => {
           </Link>
         </li>
         <li className="menu-item">
-          <Link to="/desserts">
+          <Link to="/Dessert">
             <button className="menu-button">
-              <FaIceCream className="menu-icon" /> <span>Desserts</span>
+              <FaIceCream className="menu-icon" /> <span>Dessert</span>
             </button>
           </Link>
         </li>

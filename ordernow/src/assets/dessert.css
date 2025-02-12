@@ -1,0 +1,95 @@
+.dessert-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fbe7e0; /* Light peach background */
+}
+
+.dessert-page {
+    text-align: center;
+    padding: 20px;
+    background-image: url('../assets/Dessertbgimg.jpg'); /* Set the dessert background */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.dessert-container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3); /* Light transparent white */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+    backdrop-filter: blur(10px); /* Smooth blur effect */
+}
+
+h2 {
+    color: #D2691E; /* Chocolate brown heading */
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+p1 {
+    font-size: 18px;
+    color: #444;
+}
+
+.dessert-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.dessert-item {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.dessert-item img {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+}
+
+h3 {
+    margin: 10px 0;
+    color: #b5651d; /* Warm brown text */
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+.order-button {
+    background-color: #D2691E; /* Chocolate brown button */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.order-button:hover {
+    background-color: #8B4513; /* Darker chocolate brown on hover */
+}
+
+.p1 {
+    color: black;
+}
