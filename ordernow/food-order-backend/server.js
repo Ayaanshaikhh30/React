@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGO_URI, {
 .then(() => console.log("MongoDB Connected"))
 .catch((err) => console.error("MongoDB Connection Failed:", err));
 
-// ✅ Order Schema
+//  Order Schema
 const OrderSchema = new mongoose.Schema({
   name: String,
   address: String,
@@ -24,7 +24,7 @@ const OrderSchema = new mongoose.Schema({
 
 const Order = mongoose.model("Order", OrderSchema);
 
-// ✅ API Routes
+//  API Routes
 app.get("/api", (req, res) => {
     res.json({ message: "API is working fine!" });
 });
