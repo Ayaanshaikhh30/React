@@ -14,7 +14,7 @@ const Pasta = () => {
         <div className="pasta-grid">
           {["Spaghetti", "Penne-Arrabbiata", "fettuccine-alfredo"].map((item) => (
             <div className="pasta-item" key={item}>
-              <img src={`../src/pastatype/${item.toLowerCase().replace(/\s/g, "-")}.jpg`} alt={item} />
+              <img src={`./public/image/pastatype/${item.toLowerCase().replace(/\s/g, "-")}.jpg`} alt={item} />
               <h3>{item}</h3>
               <p>Try our delicious {item}.</p>
               <button className="order-button" onClick={() => setSelectedItem(item)}>Order Now</button>

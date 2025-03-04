@@ -14,7 +14,7 @@ const Salad = () => {
         <div className="salad-grid">
           {["CaesarSalad", "greeksalad", "gardensalad"].map((item) => (
             <div className="salad-item" key={item}>
-              <img src={`../src/saladtype/${item.toLowerCase().replace(/\s/g, "-")}.jpg`} alt={item} />
+              <img src={`./public/image/saladtype/${item.toLowerCase().replace(/\s/g, "-")}.jpg`} alt={item} />
               <h3>{item}</h3>
               <p>Try our fresh {item}.</p>
               <button className="order-button" onClick={() => setSelectedItem(item)}>Order Now</button>

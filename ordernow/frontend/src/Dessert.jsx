@@ -14,7 +14,7 @@ const Dessert = () => {
         <div className="dessert-grid">
           {["chocolatecake", "Ice Cream", "Cheesecake"].map((item) => (
             <div className="dessert-item" key={item}>
-              <img src={`../src/desserttype/${item.toLowerCase().replace(/\s/g, "-")}.jpg`} alt={item} />
+              <img src={`./public/image/desserttype/${item.toLowerCase().replace(/\s/g, "-")}.jpg`} alt={item} />
               <h3>{item}</h3>
               <p>Delicious {item} to satisfy your cravings.</p>
               <button className="order-button" onClick={() => setSelectedItem(item)}>Order Now</button>

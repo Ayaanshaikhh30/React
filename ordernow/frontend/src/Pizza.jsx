@@ -14,7 +14,7 @@ const Pizza = () => {
         <div className="pizza-grid">
           {["margareta", "Pepperoni", "veggie"].map((item) => (
             <div className="pizza-item" key={item}>
-              <img src={`../src/pizzatype/${item.toLowerCase().replace(/\s/g, "-")}.jpg`} alt={item} />
+              <img src={`./public/image/pizzatype/${item.toLowerCase().replace(/\s/g, "-")}.jpg`} alt={item} />
               <h3>{item}</h3>
               <p>Try our delicious {item} pizza.</p>
               <button className="order-button" onClick={() => setSelectedItem(item)}>Order Now</button>
