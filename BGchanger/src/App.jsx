@@ -29,15 +29,15 @@
 import { useState } from "react";
 
 function App() {
-  const [bgImage, setBgImage] = useState("url('./src/image/Bydefault.jpg')");
+  const [bgImage, setBgImage] = useState("url('./image/Bydefault.jpg')");
 
   const countryBackgrounds = {
-    India: "url('./src/image/India.jpg')",
-    USA: "url('./src/image/USA.jpg')",
-    France: "url('./src/image/France.jpg')",
-    China: "url('./src/image/China.jpg')",
-    Australia: "url('./src/image/Australia.jpg')",
-    Italy: "url('./src/image/Italy.jpg')",
+    India: "url('./image/India.jpg')",
+    USA: "url('./image/USA.jpg')",
+    France: "url('./image/France.jpg')",
+    China: "url('./image/China.jpg')",
+    Australia: "url('./image/Australia.jpg')",
+    Italy: "url('./image/Italy.jpg')",
     
   };
 
