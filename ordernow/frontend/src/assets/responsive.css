@@ -1,106 +1,94 @@
-/*  Ensure all elements have correct box-sizing */
+/* ✅ Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /*  Universal Image Fix */
-  img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain; /* Prevents cropping */
-    border-radius: 8px;
-    
-  }
-  
-  /* Responsive Grid Layout */
-  .grid, .pizza-grid, .pasta-grid, .salad-grid, .dessert-grid {
+  /* ✅ Responsive Home Container */
+  .Home-container {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../assets/hotel12.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-  }
-  
-  /*  Responsive Containers */
-  .container, .pizza-container, .pasta-container, .salad-container, .dessert-container, .menu-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
+    padding: 20px;
+  
+    /* 🔥 Border-like glow effect */
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.8);
+    border-radius: 17px;
   }
   
-  /*  Make text responsive */
+  /* ✅ Responsive Heading */
   h1 {
-    font-size: 3rem;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-  }
-  
-  p {
-    font-size: 1rem;
-  }
-  
-  /*  Buttons */
-  button, .order-button {
-    font-size: 1rem;
+    font-family: "Playfair Display", serif;
+    font-size: 4rem;
+    font-weight: 800;
+    color: #f8f1e4;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
+    letter-spacing: 2px;
+    text-transform: uppercase;
     padding: 10px 20px;
-    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    border-radius: 8px;
   }
   
-  /*  Small Screens (Phones) */
-  @media (max-width: 768px) {
-    .grid, .pizza-grid, .pasta-grid, .salad-grid, .dessert-grid {
-      flex-direction: column;
-      align-items: center;
-    }
+  /* ✅ Responsive Button */
+  .home-button {
+    padding: 14px 28px;
+    background: linear-gradient(to right, #8b5e34, #5a3d2b);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    margin-top: 12px;
+  }
   
-    .container, .pizza-container, .pasta-container, .salad-container, .dessert-container {
-      width: 95%;
+  .home-button:hover {
+    background: linear-gradient(to right, #5a3d2b, #3e2723);
+    transform: scale(1.08);
+  }
+  
+  /* 📱 **Responsive Design for Mobile Screens (Max 768px)** */
+  @media (max-width: 768px) {
+    .Home-container {
+      padding: 10px;
+      text-align: center;
     }
   
     h1 {
-      font-size: 2rem;
+      font-size: 2.5rem; /* ✅ Smaller size for mobile */
+      padding: 8px 15px;
     }
   
-    h2 {
-      font-size: 1.8rem;
-    }
-  
-    p {
-      font-size: 0.9rem;
-    }
-  
-    .order-button {
-      font-size: 0.9rem;
-      padding: 8px 16px;
+    .home-button {
+      font-size: 1rem;
+      padding: 12px 24px;
     }
   }
   
-  /* ✅ Extra Small Screens (iPhone SE, etc.) */
+  /* 📱 **For Very Small Devices (Max 480px - iPhone SE, etc.)** */
   @media (max-width: 480px) {
     h1 {
-      font-size: 1.8rem;
+      font-size: 2rem;
+      padding: 6px 10px;
     }
   
-    h2 {
-      font-size: 1.5rem;
-    }
-  
-    p {
-      font-size: 0.8rem;
-    }
-  
-    .container {
-      width: 100%;
-      padding: 10px;
-    }
-  
-    button, .order-button {
-      font-size: 0.8rem;
-      padding: 6px 12px;
+    .home-button {
+      font-size: 0.9rem;
+      padding: 10px 20px;
     }
   }
   
+

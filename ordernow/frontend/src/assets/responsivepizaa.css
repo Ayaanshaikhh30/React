@@ -1,0 +1,111 @@
+/* ✅ Responsive Pizza Page */
+.pizza-page {
+    background-image: url('../assets/pizzabgimg.jpg'); /* Ensure correct background */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* ✅ Pizza Container */
+  .pizza-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 21px;
+    border-radius: 10px;
+    color: white;
+    max-width: 800px;
+    width: 90%;
+  }
+  
+  /* ✅ Pizza Heading */
+  h2 {
+    font-size: 3rem;
+    color: #ffcc00;
+    margin-bottom: 10px;
+  }
+  
+  /* ✅ Pizza Grid */
+  .pizza-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* ✅ Pizza Items */
+  .pizza-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    width: 220px;
+  }
+  
+  /* ✅ Responsive Images */
+  .pizza-item img {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    border-radius: 8px;
+    object-fit: contain; /* Prevents cropping */
+  }
+  
+  /* ✅ Order Button */
+  .order-button {
+    background: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  .order-button:hover {
+    background: #cc5500;
+  }
+  
+  /* 📱 **Responsive Design for Mobile Screens (Max 768px)** */
+  @media (max-width: 768px) {
+    .pizza-container {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 2.5rem;
+    }
+  
+    .pizza-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .pizza-item {
+      width: 90%;
+    }
+  }
+  
+  /* 📱 **For Very Small Devices (Max 480px - iPhone SE, etc.)** */
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 2rem;
+    }
+  
+    .pizza-item {
+      width: 100%;
+    }
+  
+    .order-button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  

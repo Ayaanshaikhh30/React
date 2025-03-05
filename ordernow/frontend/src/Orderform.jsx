@@ -12,7 +12,8 @@ const OrderForm = ({ item, onClose }) => {
     console.log("Sending Order Data:", orderData);  // ✅ Debugging
 
     try {
-      const response = await fetch("http://localhost:5000/api/orders", {
+      const response = await fetch("https://ordernowbackend-1.onrender.com/api/orders", 
+       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(orderData),
