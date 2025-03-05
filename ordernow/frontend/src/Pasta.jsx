@@ -1,9 +1,21 @@
 import React, { useState } from "react";
 import "./assets/pasta.css";
-import OrderForm from "./OrderForm"; // Import Order Form
+import OrderForm from "./OrderForm";
+
+// ✅ Images Import from assets
+import Spaghetti from "./assets/pastatype/spaghetti.jpg";
+import PenneAllArrabbiata from "./assets/pastatype/penne-allarrabbiata.jpg";
+import FettuccineAlfredo from "./assets/pastatype/fettuccine-alfredo.jpg";
 
 const Pasta = () => {
   const [selectedItem, setSelectedItem] = useState(null);
+
+  // ✅ Array with Imported Images
+  const pastaData = [
+    { name: "Spaghetti", image: Spaghetti },
+    { name: "Penne-AllArrabbiata", image: PenneAllArrabbiata },
+    { name: "Fettuccine-Alfredo", image: FettuccineAlfredo },
+  ];
 
   return (
     <div className="pasta-page">
@@ -12,12 +24,14 @@ const Pasta = () => {
         <p>Enjoy our mouthwatering pasta, cooked to perfection!</p>
 
         <div className="pasta-grid">
-          {["Spaghetti", "Penne-Arrabbiata", "fettuccine-alfredo"].map((item) => (
-            <div className="pasta-item" key={item}>
-              <img src={`./public/image/pastatype/${item.toLowerCase().replace(/\s/g, "-")}.jpg`} alt={item} />
-              <h3>{item}</h3>
-              <p>Try our delicious {item}.</p>
-              <button className="order-button" onClick={() => setSelectedItem(item)}>Order Now</button>
+          {pastaData.map((item) => (
+            <div className="pasta-item" key={item.name}>
+              <img src={item.image} alt={item.name} />
+              <h3>{item.name}</h3>
+              <p>Delight your taste buds with our mouthwatering {item.name}.</p>
+              <button className="order-button" onClick={() => setSelectedItem(item.name)}>
+                Order Now
+              </button>
             </div>
           ))}
         </div>

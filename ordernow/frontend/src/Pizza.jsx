@@ -1,9 +1,21 @@
 import React, { useState } from "react";
 import "./assets/pizza.css";
-import OrderForm from "./OrderForm"; // Import Order Form
+import OrderForm from "./OrderForm";
+
+// ✅ Import Images from assets
+import Margareta from "./assets/pizzatype/margareta.jpg";
+import Pepperoni from "./assets/pizzatype/pepperoni.jpg";
+import Veggie from "./assets/pizzatype/veggie.jpg";
 
 const Pizza = () => {
   const [selectedItem, setSelectedItem] = useState(null);
+
+  // ✅ Array with Imported Images
+  const pizzaData = [
+    { name: "Margareta", image: Margareta },
+    { name: "Pepperoni", image: Pepperoni },
+    { name: "Veggie", image: Veggie },
+  ];
 
   return (
     <div className="pizza-page">
@@ -12,12 +24,14 @@ const Pizza = () => {
         <p>Enjoy our freshly baked pizzas with rich toppings!</p>
 
         <div className="pizza-grid">
-          {["margareta", "Pepperoni", "veggie"].map((item) => (
-            <div className="pizza-item" key={item}>
-              <img src={`./public/image/pizzatype/${item.toLowerCase().replace(/\s/g, "-")}.jpg`} alt={item} />
-              <h3>{item}</h3>
-              <p>Try our delicious {item} pizza.</p>
-              <button className="order-button" onClick={() => setSelectedItem(item)}>Order Now</button>
+          {pizzaData.map((item) => (
+            <div className="pizza-item" key={item.name}>
+              <img src={item.image} alt={item.name} />
+              <h3>{item.name}</h3>
+              <p>Try our delicious {item.name} pizza.</p>
+              <button className="order-button" onClick={() => setSelectedItem(item.name)}>
+                Order Now
+              </button>
             </div>
           ))}
         </div>

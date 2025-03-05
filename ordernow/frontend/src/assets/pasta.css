@@ -59,6 +59,11 @@
     background: #cc5500;
   }
 
+  .pasta-item h3 {
+    min-height: 40px; /* Ensure all headings have the same height */
+  }
+  
+
 
 
   

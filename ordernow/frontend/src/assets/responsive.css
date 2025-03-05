@@ -1,0 +1,106 @@
+/*  Ensure all elements have correct box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /*  Universal Image Fix */
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* Prevents cropping */
+    border-radius: 8px;
+    
+  }
+  
+  /* Responsive Grid Layout */
+  .grid, .pizza-grid, .pasta-grid, .salad-grid, .dessert-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /*  Responsive Containers */
+  .container, .pizza-container, .pasta-container, .salad-container, .dessert-container, .menu-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  /*  Make text responsive */
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  /*  Buttons */
+  button, .order-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  /*  Small Screens (Phones) */
+  @media (max-width: 768px) {
+    .grid, .pizza-grid, .pasta-grid, .salad-grid, .dessert-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .container, .pizza-container, .pasta-container, .salad-container, .dessert-container {
+      width: 95%;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  
+    .order-button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  
+  /* ✅ Extra Small Screens (iPhone SE, etc.) */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 0.8rem;
+    }
+  
+    .container {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    button, .order-button {
+      font-size: 0.8rem;
+      padding: 6px 12px;
+    }
+  }
+  
